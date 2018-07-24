@@ -17,5 +17,10 @@ def higher_or_lower(guess):
     elif guess > secret_number:
        print('Lower')
     else:
-       print('Congratulations, you win! Guess again to restart.')
+       print('Congratulations, you win!')
        secret_number = generate_number()
+
+winning_number = secret_number
+while winning_number == secret_number:
+    guess = input("Please enter your guess: ")
+    higher_or_lower(guess)
